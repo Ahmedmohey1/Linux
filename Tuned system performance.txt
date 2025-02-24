@@ -2,6 +2,7 @@ Tuned system performance
 بختار افضل نظام للسيستم بحيث الابلكيشن عندي تشتغل بشكل افضل  
 1- manual -> 
 ودا بيكون متقدم شويه وبيستخدم في   devops & cloud advanced level
+2- auto -> ودا بيكون من ريد هات نفسها 
 //command 
 ]tuned-adm list 
 // to list all profile tuned 
