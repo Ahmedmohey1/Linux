@@ -1,0 +1,19 @@
+Tuned system performance  
+بختار افضل نظام للسيستم بحيث الابلكيشن عندي تشتغل بشكل افضل  
+1- manual -> 
+ودا بيكون متقدم شويه وبيستخدم في   devops & cloud advanced level
+//command 
+]tuned-adm list 
+// to list all profile tuned 
+]tuned-adm active 
+// to show your active  profile tuned
+]tuned-adm profile (nof profile ) 
+// to show your active  profile tuned
+nice value [-20,0,..,20]
+-20 high poirty  20 low 
+]renice -n (-20,20) PID
+// دا في حالة لو الابلكيشن شغال وبقدر اعرف قيمه عن طريقين 
+]top 
+]ps -axo user,pid,nice,....... 
+]nice -n (-20,20) pid
+
