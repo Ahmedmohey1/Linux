@@ -1,0 +1,44 @@
+
+ملحوظه اي تغيير عندي في ملفات كونفج() لازم اعمل () للسيرفس دي 
+
+
+NFS-SERVER  network file server for sharing data 
+يعني هشارك الداتا بين اليوزر والعميل بدل ما افضل انقل فيها من هنا لهنا ....الخ 
+وبتنقسم لجزء عن العميل ولدجزء عند السيرفر 
+A)SERVER         B)CLIENT 
+
+*SERVER    FIRST YOU Should know six parameter 
+1- sevice name - nfs-server   
+2- pakage  -> nfs-utils 
+3- port is 3 ports
+     1- 2049 for nfs 
+	 2- 20048 for mountd 
+	 3- 111   for rpc-bind 
+4- config -> /etc/exports
+5- data to sharing from any location /    
+6- logs -> /var/log/message  
+
+hint //
+4- config -> /etc/exports 
+ملف دا اما بفتحه بحط فيه تلت حاجات 
+الداتا اللي هشيرها 
+وأي بي بتاع العميل 
+تالت حاجه البرميشن 
+ex vim /etc/exports 
+[ /home/ahmed    192.168.2.0\24(ro-sync)
+sync to all user know what happend 
+
+
+
+
+******************************
+*client 
+لازم اتاكد انها متثبته عNFS ندي على الجهاز 
+لازم اعمل فحص على الاتصال بيني وبين السيرفر عن طريق 
+]ping ip/server
+تمام اتاكد ان الاتصال والسيرفس عندي 
+بشوف اي الحاجات اللي معمولها ماونت 
+]showmount -e ip/server
+اخر خطوه بقدير اعمل ماونتت عندي على جهاز بتاعي 
+]mount ip:shared_data   /any_path 
+وكدابقا عندي لينك من جهازي للسيرفر بدل ما انقل الداتا يدوي 
